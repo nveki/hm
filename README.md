@@ -1,2 +1,2 @@
-# hu-tres-maillard-ps
+# huitres-maillard-ps
 Huître Maillard Shop
