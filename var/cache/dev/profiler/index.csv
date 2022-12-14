@@ -1,0 +1,4 @@
+4c8ce0,::1,GET,http://localhost/hm/admin057krxijn/index.php/configure/advanced/performance/?_token=KU2IgLO6U6El9CgtGfSSqjFgWvXPzcU7M4ZtNzbPrV0,1670926229,,200
+15cad9,::1,POST,http://localhost/hm/admin057krxijn/index.php/common/notifications?_token=KU2IgLO6U6El9CgtGfSSqjFgWvXPzcU7M4ZtNzbPrV0,1670926229,,200
+d5e77e,::1,POST,http://localhost/hm/admin057krxijn/index.php/common/notifications?_token=KU2IgLO6U6El9CgtGfSSqjFgWvXPzcU7M4ZtNzbPrV0&rand=1670926229561,1670926229,,200
+6a1e3a,::1,POST,http://localhost/hm/admin057krxijn/index.php/configure/advanced/performance/debug-mode?_token=KU2IgLO6U6El9CgtGfSSqjFgWvXPzcU7M4ZtNzbPrV0,1670926270,,302
