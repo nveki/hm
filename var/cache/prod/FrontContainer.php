@@ -1472,6 +1472,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 52 => 'ps_categorytree',
                 53 => 'ps_facetedsearch',
                 54 => 'ps_mainmenu',
+                55 => 'mymodule',
             ],
             'ps_cache_dir' => '/var/www/html/hm/var/cache/prod/',
             'mail_themes_uri' => '/mails/themes',
