@@ -28,32 +28,44 @@ class MyModule extends Module
     public function install()
     {
         $this->_clearCache('*');
-        return parent::install() && $this->registerHook('displayLeftColumn');
-       
-        ;
+        return parent::install() && $this->registerHook('displayLeftColumn') && $this->registerHook('displayHeader');
+    
     }
 
     public function uninstall()
     {
         $this->_clearCache('*');
-        return parent::uninstall() && $this->unregisterHook('displayLeftColumn');;
+        return parent::uninstall() && $this->unregisterHook('displayLeftColumn') && $this->unregisterHook('displayHeader');
     }
 
-    public function postProcess(){
-        if(Tools::isSubmit('btnSubmitMyModule')){
-            dump(Tools::getAllValues()); 
-            Configuration::updateValue('TEST_INPUT', tools::getValue('TEST_INPUT'));
+    public function postProcess()
+    {
+        if(Tools::isSubmit('btnSubmitMyModule'))
+        {
+            // dump(Tools::getAllValues()); 
+            Configuration::updateValue('TEST_INPUT', Tools::getValue('TEST_INPUT'),true);
+            return 'submit';
     
         }
-        return 'no submit';
     }
 
     public function getContent()
-    {
-
+    {    
         return $this->postProcess().$this->renderForm();
 
     }
+    public function hookdisplayHeader(){ 
+        if($this->context->controller->php_self =='category'){
+            $this->context->controller->addCSS($this->_path . 'views/css/front.css', 'all');
+
+        }
+    }
+
+    public function hookdisplayLeftColumn(){
+        $this->context->smarty->assign('message', Configuration::get('TEST_INPUT'));
+        return $this->fetch($this->templateFile);
+    }
+
     public function renderForm()
     {
         $fields_form = [
@@ -64,9 +76,10 @@ class MyModule extends Module
                 ],
                 'input' => [
                     [
-                        'type' => 'text',
+                        'type' => 'textarea',
+                        'autoload_rte'=> true, 
                         'label' => $this->trans('Payee (name)', [], 'Modules.Checkpayment.Admin'),
-                        'name' => 'CHEQUE_NAME',
+                        'name' => 'TEST_INPUT',
                         'required' => true,
                     ],
                     // [
