@@ -10,25 +10,20 @@
 
   <div class="mb-2"><strong class="dark">"Aujourd’hui nous proposons une Huitre unique issue d'un terroir exceptionnel"</strong></div>
 
-  <div class="col-md-6 mt-2">
+  <div class="col-md-7 mt-2">
     <div>
-    <p>Ostréiculteurs de père en fils l’entreprise, se situe au cœur du marais salant tout proche de Marennes Oléron
-    où aujourd’hui nous élevons et affinons nos huîtres en claires. 
-    </p><p>Ostréiculteurs de père en fils l’entreprise, se situe au cœur du marais salant tout proche de Marennes Oléron
-    où aujourd’hui nous élevons et affinons nos huîtres en claires. 
-    </p><p>Ostréiculteurs de père en fils l’entreprise, se situe au cœur du marais salant tout proche de Marennes Oléron
-    où aujourd’hui nous élevons et affinons nos huîtres en claires. 
+    <p>OCimonaque de Jésus Marie Joseph de bâtard de bout d'viarge de crucifix de saint-ciboire de verrat de calvaire de boswell de colon de purée d'étole de torrieux de cul de crime de tabarslaque de caltor de saint-ciarge de sacrament de maudite marde de saintes fesses de mosus de cibouleau de cibole de bout d'ciarge de calvince de torvisse de mautadine de cochonnerie de saint-cimonaque de baptême de cibolac de calvinouche de charrue de crisse de mautadit de tabarouette de maudine de bout d'crisse de doux Jésus.
     </p>
-    </div>
-  </div>
-  <div class="module-image col-md-6">
-    <img src="{$module_dir}img/cabane-heart-mq.png" alt="Le coeur de la cabane" class="img-fluid">
-  </div>
+    <p>OCimonaque de Jésus Marie Joseph de bâtard de bout d'viarge de crucifix de saint-ciboire de verrat de calvaire de boswell de colon de purée d'étole de torrieux de cul de crime de tabarslaque de caltor de saint-ciarge de sacrament de maudite marde de saintes fesses de mosus de cibouleau de cibole de bout d'ciarge de calvince de torvisse de mautadine de cochonnerie de saint-cimonaque de baptême de cibolac de calvinouche de charrue de crisse de mautadit de tabarouette de maudine de bout d'crisse de doux Jésus.
+    </p>
 
-    <div class="col align-self-end">
-      <a href="{url entity='cms' id=4}" class=" mt-2 col-md-4 col-sm-12 module-button btn btn-primary">En Savoir
+    <a href="{url entity='cms' id=4}" class="mb-2 mt-2 col-md-4 col-sm-12 module-button btn btn-primary text-center">En Savoir
         plus</a>
     </div>
+  </div>
+  <div class="module-image col-md-5">
+    <img src="{$module_dir}img/cabane-heart-mq.png" alt="Le coeur de la cabane" class="img-fluid">
+  </div>
  
 </div>
 

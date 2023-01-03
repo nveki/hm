@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-01-03 15:28:39
+/* Smarty version 3.1.47, created on 2023-01-03 17:30:12
   from '/var/www/html/hm/themes/classic/templates/catalog/_partials/products-top.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_63b43b97927b22_36298638',
+  'unifunc' => 'content_63b45814c18b31_36429847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/sort-orders.tpl' => 1,
   ),
 ),false)) {
-function content_63b43b97927b22_36298638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63b45814c18b31_36429847 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -39,7 +39,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
     <div class="row sort-by-row">
 
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_98145929963b43b97926482_53561129', 'sort_by');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_132694718063b45814c17568_22736705', 'sort_by');
 ?>
 
 
@@ -60,12 +60,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_98145929963b43b979
 </div>
 <?php }
 /* {block 'sort_by'} */
-class Block_98145929963b43b97926482_53561129 extends Smarty_Internal_Block
+class Block_132694718063b45814c17568_22736705 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'sort_by' => 
   array (
-    0 => 'Block_98145929963b43b97926482_53561129',
+    0 => 'Block_132694718063b45814c17568_22736705',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
