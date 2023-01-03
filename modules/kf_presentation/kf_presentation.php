@@ -139,8 +139,7 @@ public function hookDisplayHome($params)
  
       return $this->display(__FILE__, 'kf_presentation.tpl');
 }
-public function hookDisplayHeader()
-{
+public function hookDisplayHeader(){
     $this->context->controller->registerStylesheet(
                 'kf_presentation',
                 $this->_path.'views/css/kf_presentation.css',
