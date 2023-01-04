@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-01-03 17:28:44
+/* Smarty version 3.1.47, created on 2023-01-04 15:53:34
   from '/var/www/html/hm/admin057krxijn/themes/default/template/helpers/uploader/simple.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_63b457bc8b65d8_22292663',
+  'unifunc' => 'content_63b592eea7f4c8_26312641',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63b457bc8b65d8_22292663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63b592eea7f4c8_26312641 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['files']->value)) && count($_smarty_tpl->tpl_vars['files']->value) > 0) {?>
 	<?php $_smarty_tpl->_assignInScope('show_thumbnail', false);?>
 	<?php

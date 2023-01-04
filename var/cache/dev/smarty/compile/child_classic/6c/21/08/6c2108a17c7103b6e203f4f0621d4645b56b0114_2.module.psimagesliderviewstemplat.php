@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-01-03 17:30:15
+/* Smarty version 3.1.47, created on 2023-01-04 16:40:03
   from 'module:psimagesliderviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_63b45817f21e17_35225913',
+  'unifunc' => 'content_63b59dd318b848_39659870',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63b45817f21e17_35225913 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63b59dd318b848_39659870 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /var/www/html/hm/themes/classic/modules/ps_imageslider/views/templates/hook/slider.tpl -->
 <?php if ($_smarty_tpl->tpl_vars['homeslider']->value['slides']) {?>
   <div id="carousel" data-ride="carousel" class="carousel slide" data-interval="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['homeslider']->value['speed'], ENT_QUOTES, 'UTF-8');?>
