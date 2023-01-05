@@ -28,6 +28,7 @@ use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
     $this->confirmUninstall = $this->l('Êtes-vous sûr de vouloir désinstaller ce module ?');
 
     $this->templateFile = 'module:kf_presentation/views/templates/hook/kf_presentation.tpl';
+
 }
 
 
@@ -54,13 +55,22 @@ public function postProcess()
             //     Configuration::updateValue('SOUSTITRE'.$lang['id_lang'], Tools::getValue('SOUSTITRE_'.$lang['id_lang']), true);
             //     Configuration::updateValue('CONTENU'.$lang['id_lang'], Tools::getValue('CONTENU_'.$lang['id_lang']), true);
             // }
+
+            if (isset($_FILES['IMAGE']) && isset($_FILES['IMAGE']['tmp_name']) && !empty($_FILES['IMAGE']['tmp_name'])) {
+                $path = _PS_MODULE_DIR_ . 'kf_presentation/images/';
+
+                if (!move_uploaded_file($_FILES['IMAGE']['tmp_name'], $path . $_FILES['IMAGE']['name'])) {
+                    return $this->displayError('Erreur lors de l\'enregistrement de l\'image');
+                }
+                Configuration::updateValue('IMAGE', $_FILES['IMAGE']['name']);
+            }
+                
+          
             Configuration::updateValue('TITRE', Tools::getValue('TITRE'));
             Configuration::updateValue('SOUSTITRE', Tools::getValue('SOUSTITRE'));
-            Configuration::updateValue('CONTENU', Tools::getValue('CONTENU'));
-            
-
-            // pour V2
-            // Configuration::updateValue('IMAGE', Tools::getValue('IMAGE'));
+            Configuration::updateValue('CONTENU1', Tools::getValue('CONTENU1'));
+            Configuration::updateValue('CONTENU2', Tools::getValue('CONTENU2'));
+            Configuration::updateValue('IMAGEDESC', Tools::getValue('IMAGEDESC'));
         }
     }
 
@@ -107,22 +117,38 @@ public function renderForm()
                     [
                         'type' => 'textarea',
                         'autoload_rte' => true,
-                        'label' => $this->trans('Votre Contenu', [], 'Modules.KfPresentation.Admin'),
-                        'name' => 'CONTENU',
+                        'label' => $this->trans('Votre premier paragraphe ', [], 'Modules.KfPresentation.Admin'),
+                        'name' => 'CONTENU1',
+                        'required' => true,
+                        // 'lang' => true
+                    ],
+                    [
+                        'type' => 'textarea',
+                        'autoload_rte' => true,
+                        'label' => $this->trans('Votre second paragraphe ', [], 'Modules.KfPresentation.Admin'),
+                        'name' => 'CONTENU2',
                         'required' => true,
                         // 'lang' => true
                     ],
                     // pour V2
-                    // [
-                    //     'type'=>'file',
-                    //     // 'autoload_rte' => true,
-                    //     'label' => $this->trans('Image Uploadée'),
-                    //     'name' => 'IMAGE',
-                    //     'desc' => $this->trans(' Uploadez une image pour illustrer votre contenu ', [], 'Modules.KfPresentation.Admin'),
+                    [
+                        'type'=>'file',
+                        // 'autoload_rte' => true,
+                        'label' => $this->trans('Image Uploadée'),
+                        'name' => 'IMAGE',
+                        'desc' => $this->trans(' Uploadez une image pour illustrer votre contenu ', [], 'Modules.KfPresentation.Admin'),
 
-                    //     'display_image' => true,
+                        'display_image' => true,
                         
-                    // ]
+                    ], 
+                    [
+                        'type' => 'text',
+                        'autoload_rte' => true,
+                        'label' => $this->trans('Description de l\'image', [], 'Modules.KfPresentation.Admin'),
+                        'name' => 'IMAGEDESC',
+                        'required' => true,
+                        // 'lang' => true
+                    ],
     
                 ],
                 'submit' => [
@@ -156,6 +182,7 @@ public function renderForm()
     }
 public function getConfigFieldsValues()
     {
+     //si gestion des lang   
         // $res = [];
         // foreach (Language::getLanguages(false) as $lang) {
         //     $res['TITRE'][$lang['id_lang']] = Tools::getValue('TITRE_'.$lang['id_lang'], Configuration::get('TITRE_'.$lang['id_lang']));
@@ -167,9 +194,11 @@ public function getConfigFieldsValues()
             return[               
                  'TITRE'=>Tools::getValue('TITRE',Configuration::get('TITRE')),
                  'SOUSTITRE'=>Tools::getValue('SOUSTITRE',Configuration::get('SOUSTITRE')),
-                 'CONTENU'=>Tools::getValue('CONTENU',Configuration::get('CONTENU')),
+                 'CONTENU1'=>Tools::getValue('CONTENU1',Configuration::get('CONTENU1')),
+                 'CONTENU2'=>Tools::getValue('CONTENU2',Configuration::get('CONTENU2')),
                  // pour V2
-                //  'IMAGE'=>Tools::getValue('IMAGE',Configuration::get('IMAGE')),
+                 'IMAGE'=>Tools::getValue('IMAGE',Configuration::get('IMAGE')),
+                 'IMAGEDESC'=>Tools::getValue('IMAGEDESC',Configuration::get('IMAGEDESC')),
             ];
 
 
@@ -191,13 +220,27 @@ public function getConfigFieldsValues()
      */
     public function getWidgetVariables($hookName, array $configuration)
     {
+        $image = Configuration::get('IMAGE', $this->context->language->id);
+        $imgDir = _PS_MODULE_DIR_ . $this->name . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR . $image;
+
+        if ($image && file_exists($imgDir)) {
+            $sizes = getimagesize($imgDir);
+
+            $this->smarty->assign([
+                'image' => $this->context->link->protocol_content . Tools::getMediaServer($image) . $this->_path . 'images/' . $image,
+    
+            ]);
+        }
   
         return [
             'titre' => Configuration::get('TITRE'),
             'soustitre' => Configuration::get('SOUSTITRE'),
-            'contenu' => Configuration::get('CONTENU'),
-            // pour V2
-            // 'image' => Configuration::get('IMAGE')
+            'contenu1' => Configuration::get('CONTENU1'),
+            'contenu2' => Configuration::get('CONTENU2'),
+            'imagedesc' => Configuration::get('IMAGEDESC'),
+            
         ];
     }
+
+
 }

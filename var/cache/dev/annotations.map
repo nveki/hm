@@ -195,4 +195,7 @@
   195 => 'Symfony\\Component\\HttpKernel\\Controller\\ControllerResolverInterface',
   196 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver',
   197 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver',
+  198 => 'PrestaShop\\Module\\PrestashopCheckout\\Controller\\AbstractFrontController',
+  199 => 'PrestaShop\\Module\\PrestashopCheckout\\Entity\\PaypalAccount',
+  200 => 'PrestaShop\\Module\\PrestashopCheckout\\Entity\\PsAccount',
 );

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>kf_presentation</name>
+    <displayName><![CDATA[Module pr&eacute;sentation courte pour HP]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Module pr&eacute;sentation d&#039;entreprise pour home page et lien vers page entreprise &quot;qui sommes nous?&quot;]]></description>
+    <author><![CDATA[K&eacute;vin Foucret]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Êtes-vous sûr de vouloir désinstaller ce module ?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

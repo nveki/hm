@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-01-04 16:35:02
+/* Smarty version 3.1.47, created on 2023-01-05 15:55:34
   from '/var/www/html/hm/admin057krxijn/themes/default/template/error.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_63b59ca6ee7bb0_70433806',
+  'unifunc' => 'content_63b6e4e63ee7c4_70083622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63b59ca6ee7bb0_70433806 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63b6e4e63ee7c4_70083622 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['php_errors']->value)) && count($_smarty_tpl->tpl_vars['php_errors']->value)) {?>
 <div class="bootstrap">
 	<div id="error-modal" class="modal fade">
