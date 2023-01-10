@@ -29,7 +29,7 @@
 
     <div class="col-md-12 mb-2">{$cms_infos.text nofilter}</div>
     
-    <a href="{url entity='category' id=20}" class="col-md-2 col-sm-12 module-button btn btn-primary center">La Boutique </a>
+    <a href="{url entity='category' id=36}" class="col-md-2 col-sm-12 module-button btn btn-primary center">La Boutique </a>
   </div>
           
 </div>

@@ -17,7 +17,7 @@
       </div>
     </div>
     <div>
-      <div class="col-md-7 mt-1">
+      <div class="col-md-7 mt-3">
         <div>
           <div>
             <div>{$contenu1 nofilter}</div>
@@ -25,9 +25,10 @@
             <div class="mt-2 mb-1">{$contenu2 nofilter}</div>
           </div>
           <div class='text-center'>
-            <a href="{url entity='cms' id=4}" class="mb-2 mt-2 col-md-4 col-sm-12 module-button btn btn-primary center">En
+          {* Bouton vers une eventuelle page qui sommes-nous *}
+            {* <a href="{url entity='cms' id=2}" class="mb-2 mt-2 col-md-4 col-sm-12 module-button btn btn-primary center">En
               Savoir
-              plus</a>
+              plus</a> *}
           </div>
         </div>
       </div>
